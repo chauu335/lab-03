@@ -14,7 +14,7 @@ import androidx.fragment.app.DialogFragment;
 
 public class EditCityFragment extends DialogFragment {
     interface EditCityDialogListener {
-        public void editCity();
+        public void updateCityEdit();
     }
 
     private EditCityDialogListener listener;
@@ -61,7 +61,7 @@ public class EditCityFragment extends DialogFragment {
                         city.setName(cityName);
                         city.setProvince(provinceName);
                     }
-                    listener.editCity();
+                    listener.updateCityEdit();
                 })
                 .create();
     }
